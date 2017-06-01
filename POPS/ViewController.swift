@@ -391,10 +391,10 @@ class ViewController: NSViewController {
         cue2popsLogTextView.string = output;
         
         //1.5 let's copy the VCD from the temp directory to the POPS folder
-        cue2popsLogTextView.string?.append("\n\nconversion complete! copying to \(self.externalVolumeTextField.stringValue + "/POPS/\(vcdNameWithoutExtension).VCD")")
         let fileManager = FileManager.default
         do {
             try fileManager.copyItem(atPath: temporaryDirectory! + "/IMAGE.VCD", toPath: self.externalVolumeTextField.stringValue + "/POPS/\(vcdNameWithoutExtension).VCD")
+            cue2popsLogTextView.string?.append("\n\nconversion complete! copied to \(self.externalVolumeTextField.stringValue + "/POPS/\(vcdNameWithoutExtension).VCD")")
         } catch {
             NSLog("error copying VCD")
             //TODO: proper error
