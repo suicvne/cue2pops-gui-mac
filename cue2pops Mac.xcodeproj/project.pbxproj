@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		278E1FC81EE08B21008A86E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FC71EE08B21008A86E0 /* AppDelegate.swift */; };
+		278E1FCA1EE08B21008A86E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FC91EE08B21008A86E0 /* ViewController.swift */; };
+		278E1FCC1EE08B21008A86E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FCB1EE08B21008A86E0 /* Assets.xcassets */; };
+		278E1FCF1EE08B21008A86E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FCD1EE08B21008A86E0 /* Main.storyboard */; };
+		278E1FDA1EE08B21008A86E0 /* POPSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FD91EE08B21008A86E0 /* POPSTests.swift */; };
+		278E1FE51EE08B21008A86E0 /* POPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FE41EE08B21008A86E0 /* POPSUITests.swift */; };
+		278E1FF51EE094CE008A86E0 /* POPSTARTER.ELF in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */; };
+		278E1FFD1EE09C3C008A86E0 /* cue2pops in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FFC1EE09C3C008A86E0 /* cue2pops */; };
+		278E20011EE0B480008A86E0 /* cue2pops.c in Sources */ = {isa = PBXBuildFile; fileRef = 278E20001EE0B480008A86E0 /* cue2pops.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		278E1FD61EE08B21008A86E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278E1FBC1EE08B21008A86E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 278E1FC31EE08B21008A86E0;
+			remoteInfo = POPS;
+		};
+		278E1FE11EE08B21008A86E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278E1FBC1EE08B21008A86E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 278E1FC31EE08B21008A86E0;
+			remoteInfo = POPS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		278E1FC41EE08B21008A86E0 /* cue2pops Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cue2pops Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		278E1FC71EE08B21008A86E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		278E1FC91EE08B21008A86E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		278E1FCB1EE08B21008A86E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		278E1FCE1EE08B21008A86E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		278E1FD01EE08B21008A86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278E1FD51EE08B21008A86E0 /* cue2pops MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cue2pops MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		278E1FD91EE08B21008A86E0 /* POPSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPSTests.swift; sourceTree = "<group>"; };
+		278E1FDB1EE08B21008A86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278E1FE01EE08B21008A86E0 /* cue2pops MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cue2pops MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		278E1FE41EE08B21008A86E0 /* POPSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPSUITests.swift; sourceTree = "<group>"; };
+		278E1FE61EE08B21008A86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */ = {isa = PBXFileReference; lastKnownFileType = file; path = POPSTARTER.ELF; sourceTree = "<group>"; };
+		278E1FFC1EE09C3C008A86E0 /* cue2pops */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cue2pops; sourceTree = "<group>"; };
+		278E20001EE0B480008A86E0 /* cue2pops.c */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = cue2pops.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		278E1FC11EE08B21008A86E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E1FD21EE08B21008A86E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E1FDD1EE08B21008A86E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		278E1FBB1EE08B21008A86E0 = {
+			isa = PBXGroup;
+			children = (
+				278E1FC61EE08B21008A86E0 /* POPS */,
+				278E1FD81EE08B21008A86E0 /* POPSTests */,
+				278E1FE31EE08B21008A86E0 /* POPSUITests */,
+				278E1FC51EE08B21008A86E0 /* Products */,
+				278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */,
+				278E1FFC1EE09C3C008A86E0 /* cue2pops */,
+				278E20001EE0B480008A86E0 /* cue2pops.c */,
+			);
+			sourceTree = "<group>";
+		};
+		278E1FC51EE08B21008A86E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278E1FC41EE08B21008A86E0 /* cue2pops Mac.app */,
+				278E1FD51EE08B21008A86E0 /* cue2pops MacTests.xctest */,
+				278E1FE01EE08B21008A86E0 /* cue2pops MacUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278E1FC61EE08B21008A86E0 /* POPS */ = {
+			isa = PBXGroup;
+			children = (
+				278E1FC71EE08B21008A86E0 /* AppDelegate.swift */,
+				278E1FC91EE08B21008A86E0 /* ViewController.swift */,
+				278E1FCB1EE08B21008A86E0 /* Assets.xcassets */,
+				278E1FCD1EE08B21008A86E0 /* Main.storyboard */,
+				278E1FD01EE08B21008A86E0 /* Info.plist */,
+			);
+			path = POPS;
+			sourceTree = "<group>";
+		};
+		278E1FD81EE08B21008A86E0 /* POPSTests */ = {
+			isa = PBXGroup;
+			children = (
+				278E1FD91EE08B21008A86E0 /* POPSTests.swift */,
+				278E1FDB1EE08B21008A86E0 /* Info.plist */,
+			);
+			path = POPSTests;
+			sourceTree = "<group>";
+		};
+		278E1FE31EE08B21008A86E0 /* POPSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				278E1FE41EE08B21008A86E0 /* POPSUITests.swift */,
+				278E1FE61EE08B21008A86E0 /* Info.plist */,
+			);
+			path = POPSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		278E1FC31EE08B21008A86E0 /* cue2pops Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278E1FE91EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops Mac" */;
+			buildPhases = (
+				278E1FC01EE08B21008A86E0 /* Sources */,
+				278E1FC11EE08B21008A86E0 /* Frameworks */,
+				278E1FC21EE08B21008A86E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cue2pops Mac";
+			productName = POPS;
+			productReference = 278E1FC41EE08B21008A86E0 /* cue2pops Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		278E1FD41EE08B21008A86E0 /* cue2pops MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278E1FEC1EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops MacTests" */;
+			buildPhases = (
+				278E1FD11EE08B21008A86E0 /* Sources */,
+				278E1FD21EE08B21008A86E0 /* Frameworks */,
+				278E1FD31EE08B21008A86E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				278E1FD71EE08B21008A86E0 /* PBXTargetDependency */,
+			);
+			name = "cue2pops MacTests";
+			productName = POPSTests;
+			productReference = 278E1FD51EE08B21008A86E0 /* cue2pops MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		278E1FDF1EE08B21008A86E0 /* cue2pops MacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278E1FEF1EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops MacUITests" */;
+			buildPhases = (
+				278E1FDC1EE08B21008A86E0 /* Sources */,
+				278E1FDD1EE08B21008A86E0 /* Frameworks */,
+				278E1FDE1EE08B21008A86E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				278E1FE21EE08B21008A86E0 /* PBXTargetDependency */,
+			);
+			name = "cue2pops MacUITests";
+			productName = POPSUITests;
+			productReference = 278E1FE01EE08B21008A86E0 /* cue2pops MacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		278E1FBC1EE08B21008A86E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Mike Santiago";
+				TargetAttributes = {
+					278E1FC31EE08B21008A86E0 = {
+						CreatedOnToolsVersion = 8.3.1;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					278E1FD41EE08B21008A86E0 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 278E1FC31EE08B21008A86E0;
+					};
+					278E1FDF1EE08B21008A86E0 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 278E1FC31EE08B21008A86E0;
+					};
+				};
+			};
+			buildConfigurationList = 278E1FBF1EE08B21008A86E0 /* Build configuration list for PBXProject "cue2pops Mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 278E1FBB1EE08B21008A86E0;
+			productRefGroup = 278E1FC51EE08B21008A86E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				278E1FC31EE08B21008A86E0 /* cue2pops Mac */,
+				278E1FD41EE08B21008A86E0 /* cue2pops MacTests */,
+				278E1FDF1EE08B21008A86E0 /* cue2pops MacUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		278E1FC21EE08B21008A86E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E1FCC1EE08B21008A86E0 /* Assets.xcassets in Resources */,
+				278E1FFD1EE09C3C008A86E0 /* cue2pops in Resources */,
+				278E1FCF1EE08B21008A86E0 /* Main.storyboard in Resources */,
+				278E1FF51EE094CE008A86E0 /* POPSTARTER.ELF in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E1FD31EE08B21008A86E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E1FDE1EE08B21008A86E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		278E1FC01EE08B21008A86E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E20011EE0B480008A86E0 /* cue2pops.c in Sources */,
+				278E1FCA1EE08B21008A86E0 /* ViewController.swift in Sources */,
+				278E1FC81EE08B21008A86E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E1FD11EE08B21008A86E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E1FDA1EE08B21008A86E0 /* POPSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278E1FDC1EE08B21008A86E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278E1FE51EE08B21008A86E0 /* POPSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		278E1FD71EE08B21008A86E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 278E1FC31EE08B21008A86E0 /* cue2pops Mac */;
+			targetProxy = 278E1FD61EE08B21008A86E0 /* PBXContainerItemProxy */;
+		};
+		278E1FE21EE08B21008A86E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 278E1FC31EE08B21008A86E0 /* cue2pops Mac */;
+			targetProxy = 278E1FE11EE08B21008A86E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		278E1FCD1EE08B21008A86E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				278E1FCE1EE08B21008A86E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		278E1FE71EE08B21008A86E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		278E1FE81EE08B21008A86E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		278E1FEA1EE08B21008A86E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = POPS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = woo.POPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		278E1FEB1EE08B21008A86E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = POPS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = woo.POPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		278E1FED1EE08B21008A86E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = POPSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = woo.POPSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cue2pops Mac.app/Contents/MacOS/cue2pops Mac";
+			};
+			name = Debug;
+		};
+		278E1FEE1EE08B21008A86E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = POPSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = woo.POPSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cue2pops Mac.app/Contents/MacOS/cue2pops Mac";
+			};
+			name = Release;
+		};
+		278E1FF01EE08B21008A86E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = POPSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = woo.POPSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = POPS;
+			};
+			name = Debug;
+		};
+		278E1FF11EE08B21008A86E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = POPSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = woo.POPSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = POPS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		278E1FBF1EE08B21008A86E0 /* Build configuration list for PBXProject "cue2pops Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E1FE71EE08B21008A86E0 /* Debug */,
+				278E1FE81EE08B21008A86E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278E1FE91EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E1FEA1EE08B21008A86E0 /* Debug */,
+				278E1FEB1EE08B21008A86E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		278E1FEC1EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E1FED1EE08B21008A86E0 /* Debug */,
+				278E1FEE1EE08B21008A86E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		278E1FEF1EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops MacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E1FF01EE08B21008A86E0 /* Debug */,
+				278E1FF11EE08B21008A86E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 278E1FBC1EE08B21008A86E0 /* Project object */;
+}
