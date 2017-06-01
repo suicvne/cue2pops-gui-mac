@@ -428,7 +428,12 @@ class ViewController: NSViewController {
         alert.alertStyle = NSAlertStyle.informational
         alert.messageText = "All files copied!"
         alert.informativeText = "Now:\n1. Insert the flash drive into your PlayStation 2\n2. Open uLaunchElf\n3. Navigate to the flashdrive and run \(vcdNameWithoutExtension).elf"
-        alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
+        alert.beginSheetModal(for: self.view.window!) { (result: Int) in
+            if(self.unmountDriveAfter) //the drives unmounted, might as well close too....
+            {
+                self.view.window!.close()
+            }
+        }
     }
 
 }
