@@ -31,11 +31,25 @@ extension String {
 
 class ViewController: NSViewController {
 
+    var expanded = true
     
     var allowedFileExtensions: [Any] = ["cue"]
     
     let cue2popsPath = Bundle.main.resourcePath! + "/cue2pops"
     let elfPath = Bundle.main.resourcePath! + "/POPSTARTER.ELF"
+    
+    /**
+     extra options
+     */
+    
+    var gapMode = 0; //0 = disabled, 1 = ++, 2 = --
+    var vmode = false;
+    var trainer = false;
+    var unmountDriveAfter = false;
+    
+    /**
+     extra options
+     */
     
     
     @IBOutlet weak var gameFileTextField: NSTextField!
@@ -45,7 +59,12 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var selectGameFileButton: NSButton!
     
+    @IBOutlet weak var gapDisableRadio: NSButton!
+    @IBOutlet weak var gapPlusPlusRadio: NSButton!
+    @IBOutlet weak var gapMinusMinusRadio: NSButton!
+    
     override func viewDidLoad() {
+        toggleResize()
         if #available(OSX 10.10, *) {
             super.viewDidLoad()
         } else {
@@ -53,7 +72,26 @@ class ViewController: NSViewController {
             self.viewDidLoad()
         }
 
-        // Do any additional setup after loading the view.
+        
+    }
+    @IBAction func showMoreClick(_ sender: Any) {
+        toggleResize()
+    }
+    
+    func toggleResize()
+    {
+        expanded = !expanded
+        var frame = self.view.window?.frame
+        if(expanded) //expand
+        {
+            frame?.size.height = 475
+        }
+        else //shrink
+        {
+            frame?.size.height = 320
+        }
+        
+        self.view.window?.setFrame(frame!, display: true, animate: true)
     }
     
     @IBAction func selectGameButtonClick(_ sender: Any) {
@@ -78,6 +116,59 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func gapModeToggle(_ sender: Any) {
+        if(gapDisableRadio.state == 1)
+        {
+            gapMode = 0
+        }
+        else if(gapPlusPlusRadio.state == 1)
+        {
+            gapMode = 1
+        }
+        else if(gapMinusMinusRadio.state == 1)
+        {
+            gapMode = 2
+        }
+    }
+    
+    @IBOutlet weak var vmodeToggle: NSButton!
+    @IBOutlet weak var trainerToggle: NSButton!
+    @IBOutlet weak var unmountDriveToggle: NSButton!
+    
+    @IBAction func vmodeToggleClick(_ sender: Any) {
+        if(vmodeToggle.state == 1)
+        {
+            vmode = true
+        }
+        else
+        {
+            vmode = false
+        }
+    }
+    @IBAction func trainerToggleClick(_ sender: Any) {
+        if(trainerToggle.state == 1)
+        {
+            trainer = true
+        }
+        else
+        {
+            trainer = false
+        }
+    }
+    
+    @IBAction func unmountDriveToggleClick(_ sender: Any) {
+        if(unmountDriveToggle.state == 1)
+        {
+            unmountDriveAfter = true
+        }
+        else
+        {
+            unmountDriveAfter = false
+        }
+    }
+    
+    @IBAction func showMoreOptionsButtonClick(_ sender: Any) {
+    }
     func isDirectoryWriteable(path: String) -> Bool {
         let fileManager = FileManager.default
         var destinationString = path //copy so we can mess around with it
@@ -273,9 +364,29 @@ class ViewController: NSViewController {
         let vcdNameWithoutExtension = removeSpecialCharsFromString(text: pathToCue.fileName())
         let temporaryDirectory = createTempDirectory()
         
+        var commandLineArgs = [gameFileTextField.stringValue]
+        if(gapMode == 1) //++
+        {
+            commandLineArgs.append("gap++")
+        }
+        else if(gapMode == 2) //--
+        {
+            commandLineArgs.append("gap--")
+        }
+        
+        if(vmode)
+        {
+            commandLineArgs.append("vmode")
+        }
+        if(trainer)
+        {
+            commandLineArgs.append("trainer")
+        }
+        
+        commandLineArgs.append(temporaryDirectory! + "/IMAGE.VCD") //ensures the output file is last
         
         //1. Run the conversion using execute command
-        let output = executeCommand(command: cue2popsPath, args: [gameFileTextField.stringValue, temporaryDirectory! + "/IMAGE.VCD"])
+        let output = executeCommand(command: cue2popsPath, args: commandLineArgs)
         //self.externalVolumeTextField.stringValue + "/POPS/" + vcdNameWithoutExtension + ".VCD"
         cue2popsLogTextView.string = output;
         
@@ -304,6 +415,12 @@ class ViewController: NSViewController {
             try fileManager.removeItem(atPath: temporaryDirectory!) //remove temp directory
         } catch {
             NSLog("error deleting temp directory??")
+        }
+        
+        if(unmountDriveAfter)
+        {
+            let workspace = NSWorkspace()
+            workspace.unmountAndEjectDevice(atPath: externalVolumeTextField.stringValue)
         }
         
         let alert = NSAlert()

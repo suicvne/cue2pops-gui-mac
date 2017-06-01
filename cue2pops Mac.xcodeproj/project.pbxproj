@@ -51,7 +51,7 @@
 		278E1FE61EE08B21008A86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */ = {isa = PBXFileReference; lastKnownFileType = file; path = POPSTARTER.ELF; sourceTree = "<group>"; };
 		278E1FFC1EE09C3C008A86E0 /* cue2pops */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cue2pops; sourceTree = "<group>"; };
-		278E20001EE0B480008A86E0 /* cue2pops.c */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = cue2pops.c; sourceTree = "<group>"; };
+		278E20001EE0B480008A86E0 /* cue2pops.c */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = cue2pops.c; sourceTree = "<group>"; };
 		279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = "cue2pops Help.rtfd"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +202,7 @@
 				TargetAttributes = {
 					278E1FC31EE08B21008A86E0 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = E9V82VVYS8;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -417,12 +418,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9V82VVYS8;
 				INFOPLIST_FILE = POPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = woo.POPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -433,12 +437,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E9V82VVYS8;
 				INFOPLIST_FILE = POPS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = woo.POPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

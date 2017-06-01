@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -165,11 +166,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="cue2pops_Mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="294"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="301"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1w-zu-RGr">
-                                <rect key="frame" x="20" y="225" width="369" height="22"/>
+                                <rect key="frame" x="20" y="245" width="369" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Ttd-HQ-TdB">
                                     <font key="font" metaFont="system"/>
@@ -178,7 +179,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi9-4D-3Ri">
-                                <rect key="frame" x="20" y="255" width="62" height="17"/>
+                                <rect key="frame" x="20" y="275" width="62" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Game file" id="WTs-oy-9Lu">
                                     <font key="font" metaFont="system"/>
@@ -187,7 +188,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKT-jU-0ML">
-                                <rect key="frame" x="392" y="219" width="79" height="32"/>
+                                <rect key="frame" x="392" y="239" width="79" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ixb-Ar-NlG">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -198,7 +199,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yss-Lp-mBL">
-                                <rect key="frame" x="20" y="170" width="369" height="22"/>
+                                <rect key="frame" x="20" y="190" width="369" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="m0Z-q5-LKJ">
                                     <font key="font" metaFont="system"/>
@@ -207,7 +208,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKD-Xv-3ZL">
-                                <rect key="frame" x="20" y="200" width="102" height="17"/>
+                                <rect key="frame" x="20" y="220" width="102" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="External Volume" id="chh-jV-Si9">
                                     <font key="font" metaFont="system"/>
@@ -216,7 +217,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igt-Wf-4cE">
-                                <rect key="frame" x="20" y="134" width="99" height="17"/>
+                                <rect key="frame" x="20" y="154" width="99" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="cue2pops Log" id="NRl-1U-F0q">
                                     <font key="font" metaFont="system"/>
@@ -225,7 +226,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpG-W6-eXY">
-                                <rect key="frame" x="392" y="164" width="79" height="32"/>
+                                <rect key="frame" x="392" y="184" width="79" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lw1-2c-zeP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -236,7 +237,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86u-KR-ksF">
-                                <rect key="frame" x="378" y="129" width="93" height="32"/>
+                                <rect key="frame" x="378" y="149" width="93" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Convert!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5wg-iC-1OR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -247,8 +248,8 @@
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kK-6m-qN7">
-                                <rect key="frame" x="22" y="20" width="443" height="106"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="frame" x="22" y="40" width="443" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="Xnj-0p-QHa">
                                     <rect key="frame" x="1" y="1" width="426" height="104"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,18 +274,120 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZS-Ki-7Ow">
+                                <rect key="frame" x="440" y="8" width="29" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6an-0m-FCt">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="showMoreClick:" target="XfG-lQ-9wD" id="UpH-53-AdG"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkY-KS-npm">
+                                <rect key="frame" x="22" y="-33" width="422" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Extra Options (Don't touch these unless you know what you're doing)" id="fAN-ke-uKW">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box fixedFrame="YES" title="Gap Mode" translatesAutoresizingMaskIntoConstraints="NO" id="3XA-7V-h01">
+                                <rect key="frame" x="21" y="-146" width="124" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="lOo-nB-8bR">
+                                    <rect key="frame" x="2" y="2" width="120" height="88"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36Q-HA-DVQ">
+                                            <rect key="frame" x="19" y="57" width="75" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Disabled" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="bQV-2O-M27">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="gapModeToggle:" target="XfG-lQ-9wD" id="Q99-eI-0u6"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-93-3l6">
+                                            <rect key="frame" x="19" y="13" width="35" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="--" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Soh-yg-aqJ">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="gapModeToggle:" target="XfG-lQ-9wD" id="IoS-jL-34e"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wF4-cd-moW">
+                                            <rect key="frame" x="19" y="35" width="39" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="++" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Xzc-R0-UnM">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="gapModeToggle:" target="XfG-lQ-9wD" id="0Ca-ga-99k"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCg-as-NEH">
+                                <rect key="frame" x="148" y="-79" width="64" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="vmode" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Z5U-KE-b3Q">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="vmodeToggleClick:" target="XfG-lQ-9wD" id="g34-aG-3dT"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-oC-ph9">
+                                <rect key="frame" x="148" y="-99" width="62" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="trainer" bezelStyle="regularSquare" imagePosition="left" inset="2" id="z5V-OL-kup">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="trainerToggleClick:" target="XfG-lQ-9wD" id="yc9-6a-FUu"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6t-7J-rGa">
+                                <rect key="frame" x="148" y="-119" width="200" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Unmount Drive After Copying" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JPf-A6-5yw">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="unmountDriveToggleClick:" target="XfG-lQ-9wD" id="sav-ig-3Dj"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="cue2popsLogTextView" destination="86B-oG-PIN" id="qKd-K6-uTB"/>
                         <outlet property="externalVolumeTextField" destination="yss-Lp-mBL" id="20D-4K-rfQ"/>
                         <outlet property="gameFileTextField" destination="n1w-zu-RGr" id="jG5-bj-wIU"/>
+                        <outlet property="gapDisableRadio" destination="36Q-HA-DVQ" id="1jU-yf-w4z"/>
+                        <outlet property="gapMinusMinusRadio" destination="Zlp-93-3l6" id="ZIf-nf-qkl"/>
+                        <outlet property="gapPlusPlusRadio" destination="wF4-cd-moW" id="Trv-ev-771"/>
                         <outlet property="selectGameFileButton" destination="uKT-jU-0ML" id="Wdf-5c-lZl"/>
+                        <outlet property="trainerToggle" destination="nYo-oC-ph9" id="y8Q-6F-ueE"/>
+                        <outlet property="unmountDriveToggle" destination="j6t-7J-rGa" id="WOG-Fn-gCc"/>
+                        <outlet property="vmodeToggle" destination="FCg-as-NEH" id="3bM-zY-PqE"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="667"/>
+            <point key="canvasLocation" x="75" y="669.5"/>
         </scene>
     </scenes>
 </document>
