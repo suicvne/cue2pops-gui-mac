@@ -16,6 +16,7 @@
 		278E1FF51EE094CE008A86E0 /* POPSTARTER.ELF in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */; };
 		278E1FFD1EE09C3C008A86E0 /* cue2pops in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FFC1EE09C3C008A86E0 /* cue2pops */; };
 		278E20011EE0B480008A86E0 /* cue2pops.c in Sources */ = {isa = PBXBuildFile; fileRef = 278E20001EE0B480008A86E0 /* cue2pops.c */; };
+		279756C21EE0C02400A46EC8 /* cue2pops Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */ = {isa = PBXFileReference; lastKnownFileType = file; path = POPSTARTER.ELF; sourceTree = "<group>"; };
 		278E1FFC1EE09C3C008A86E0 /* cue2pops */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cue2pops; sourceTree = "<group>"; };
 		278E20001EE0B480008A86E0 /* cue2pops.c */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = cue2pops.c; sourceTree = "<group>"; };
+		279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = "cue2pops Help.rtfd"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */,
 				278E1FFC1EE09C3C008A86E0 /* cue2pops */,
 				278E20001EE0B480008A86E0 /* cue2pops.c */,
+				279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +244,7 @@
 			files = (
 				278E1FCC1EE08B21008A86E0 /* Assets.xcassets in Resources */,
 				278E1FFD1EE09C3C008A86E0 /* cue2pops in Resources */,
+				279756C21EE0C02400A46EC8 /* cue2pops Help.rtfd in Resources */,
 				278E1FCF1EE08B21008A86E0 /* Main.storyboard in Resources */,
 				278E1FF51EE094CE008A86E0 /* POPSTARTER.ELF in Resources */,
 			);
@@ -516,6 +520,7 @@
 				278E1FEB1EE08B21008A86E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		278E1FEC1EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops MacTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				278E1FEE1EE08B21008A86E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		278E1FEF1EE08B21008A86E0 /* Build configuration list for PBXNativeTarget "cue2pops MacUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				278E1FF11EE08B21008A86E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

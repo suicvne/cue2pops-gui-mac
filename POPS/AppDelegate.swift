@@ -29,9 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSWorkspace.shared().open(URL(string: "https://github.com/ErikAndren/cue2pops-mac")!)
     }
     @IBAction func onHelpClick(_ sender: Any) {
-        let alert = NSAlert()
-        alert.messageText = "help me";
-        alert.runModal()
+        let path = Bundle.main.resourcePath!
+        NSWorkspace.shared().open(URL(fileURLWithPath: path + "/cue2pops Help.rtfd"))
     }
 }
 
