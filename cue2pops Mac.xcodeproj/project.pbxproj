@@ -15,7 +15,6 @@
 		278E1FE51EE08B21008A86E0 /* POPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FE41EE08B21008A86E0 /* POPSUITests.swift */; };
 		278E1FF51EE094CE008A86E0 /* POPSTARTER.ELF in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */; };
 		278E1FFD1EE09C3C008A86E0 /* cue2pops in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FFC1EE09C3C008A86E0 /* cue2pops */; };
-		278E20011EE0B480008A86E0 /* cue2pops.c in Sources */ = {isa = PBXBuildFile; fileRef = 278E20001EE0B480008A86E0 /* cue2pops.c */; };
 		279756C21EE0C02400A46EC8 /* cue2pops Help.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		278E1FE61EE08B21008A86E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */ = {isa = PBXFileReference; lastKnownFileType = file; path = POPSTARTER.ELF; sourceTree = "<group>"; };
 		278E1FFC1EE09C3C008A86E0 /* cue2pops */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cue2pops; sourceTree = "<group>"; };
-		278E20001EE0B480008A86E0 /* cue2pops.c */ = {isa = PBXFileReference; explicitFileType = compiled; fileEncoding = 4; path = cue2pops.c; sourceTree = "<group>"; };
 		279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = "cue2pops Help.rtfd"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 				278E1FC51EE08B21008A86E0 /* Products */,
 				278E1FF41EE094CE008A86E0 /* POPSTARTER.ELF */,
 				278E1FFC1EE09C3C008A86E0 /* cue2pops */,
-				278E20001EE0B480008A86E0 /* cue2pops.c */,
 				279756C11EE0C02400A46EC8 /* cue2pops Help.rtfd */,
 			);
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278E20011EE0B480008A86E0 /* cue2pops.c in Sources */,
 				278E1FCA1EE08B21008A86E0 /* ViewController.swift in Sources */,
 				278E1FC81EE08B21008A86E0 /* AppDelegate.swift in Sources */,
 			);

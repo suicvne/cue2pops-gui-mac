@@ -284,7 +284,7 @@ class ViewController: NSViewController {
         task.launch()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output: String = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as! String
+        let output: String = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String!
         return output        
     }
 
@@ -313,10 +313,8 @@ class ViewController: NSViewController {
         return String(text.characters.filter {okayChars.contains($0) })
     }
     
-    @IBAction func convertButtonClicked(_ sender: Any) {
-        
-        cue2popsLogTextView.string = ""; //clear log
-        
+    func checkAllParameters() -> Bool
+    {
         if(gameFileTextField.stringValue.isEmpty)
         {
             let alert = NSAlert()
@@ -326,7 +324,7 @@ class ViewController: NSViewController {
             alert.informativeText = "The path specified as your game cue file is empty or invalid."
             alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
             
-            return;
+            return false;
         }
         
         if(!externalVolumeTextField.stringValue.isEmpty) //if it's not empty, then we check for the pops path
@@ -342,7 +340,7 @@ class ViewController: NSViewController {
                 alert.informativeText = "Please click 'Convert!' again."
                 alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
                 
-                return;
+                return false;
             }
         }
         else
@@ -354,16 +352,13 @@ class ViewController: NSViewController {
             alert.informativeText = "The path specified as your external volume is empty or invalid."
             alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
             
-            return;
+            return false;
         }
         
-        
-        //NSLog(Bundle.main.resourcePath!)
-        
-        let pathToCue = gameFileTextField.stringValue
-        let vcdNameWithoutExtension = removeSpecialCharsFromString(text: pathToCue.fileName())
-        let temporaryDirectory = createTempDirectory()
-        
+        return true;
+    }
+    
+    func createCue2PopsArgs(tempDir: String) -> [String] {
         var commandLineArgs = [gameFileTextField.stringValue]
         if(gapMode == 1) //++
         {
@@ -383,38 +378,81 @@ class ViewController: NSViewController {
             commandLineArgs.append("trainer")
         }
         
-        commandLineArgs.append(temporaryDirectory! + "/IMAGE.VCD") //ensures the output file is last
+        commandLineArgs.append(tempDir + "/IMAGE.VCD") //ensures the output file is last
+        
+        return commandLineArgs
+    }
+    
+    func copyVCDfromTemp(tempDir: String, vcdName: String) -> Bool {
+        let fileManager = FileManager.default
+        do {
+            try fileManager.copyItem(atPath: tempDir + "/IMAGE.VCD", toPath: self.externalVolumeTextField.stringValue + "/POPS/\(vcdName).VCD")
+        } catch {
+            NSLog("error copying VCD")
+            
+            let alert = NSAlert()
+            alert.addButton(withTitle: "OK")
+            alert.alertStyle = NSAlertStyle.informational
+            alert.messageText = "Error Copying VCD"
+            alert.informativeText = "An unknown error occurred while copying the VCD: \(error.localizedDescription)"
+            alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
+            return false;
+        }
+        
+        addToLog(log: "conversion complete! copied to \(self.externalVolumeTextField.stringValue + "/POPS/\(vcdName).VCD")")
+        return true
+    }
+    
+    func addToLog(log: String) {
+        cue2popsLogTextView.string?.append("\n\(log)")
+        cue2popsLogTextView.scrollToEndOfDocument(self)
+    }
+    
+    func copyElf(vcdName: String) -> Bool {
+        do {
+            try FileManager.default.copyItem(atPath: self.elfPath, toPath: self.externalVolumeTextField.stringValue + "/XX." + vcdName + ".ELF")
+        } catch {
+            NSLog("error copying elf");
+            
+            let alert = NSAlert()
+            alert.addButton(withTitle: "OK")
+            alert.alertStyle = NSAlertStyle.critical
+            alert.messageText = "Error Copying ELF"
+            alert.informativeText = "An unknown error occurred while copying the ELF: \(error.localizedDescription)"
+            alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
+            return false;
+        }
+        return true
+    }
+    
+    @IBAction func convertButtonClicked(_ sender: Any) {
+        
+        cue2popsLogTextView.string = ""; //clear log
+        
+        if(!checkAllParameters()) {return;} //check all the text boxes to make sure the paths are valid and what-not
+        
+        
+        let pathToCue = gameFileTextField.stringValue
+        let vcdNameWithoutExtension = removeSpecialCharsFromString(text: pathToCue.fileName())
+        let temporaryDirectory = createTempDirectory()
+        
+        let commandLineArgs = createCue2PopsArgs(tempDir: temporaryDirectory!)
         
         //1. Run the conversion using execute command
         let output = executeCommand(command: cue2popsPath, args: commandLineArgs)
-        //self.externalVolumeTextField.stringValue + "/POPS/" + vcdNameWithoutExtension + ".VCD"
-        cue2popsLogTextView.string = output;
+        addToLog(log: output)
         
         //1.5 let's copy the VCD from the temp directory to the POPS folder
-        let fileManager = FileManager.default
-        do {
-            try fileManager.copyItem(atPath: temporaryDirectory! + "/IMAGE.VCD", toPath: self.externalVolumeTextField.stringValue + "/POPS/\(vcdNameWithoutExtension).VCD")
-            cue2popsLogTextView.string?.append("\n\nconversion complete! copied to \(self.externalVolumeTextField.stringValue + "/POPS/\(vcdNameWithoutExtension).VCD")")
-        } catch {
-            NSLog("error copying VCD")
-            //TODO: proper error
-            return;
-        }
+        if(!copyVCDfromTemp(tempDir: temporaryDirectory!, vcdName: vcdNameWithoutExtension)) { return }
         
         //2. at this point, the pops folder is setup. lets copy the elf and of course, rename it
-        do {
-            try fileManager.copyItem(atPath: self.elfPath, toPath: self.externalVolumeTextField.stringValue + "/XX." + vcdNameWithoutExtension + ".ELF")
-        } catch {
-            NSLog("error copying elf");
-            //TODO: proper error
-            return;
-        }
-        
+        if(!copyElf(vcdName: vcdNameWithoutExtension)) { return }
+        //2.5 delete the temporary directory
         do
         {
-            try fileManager.removeItem(atPath: temporaryDirectory!) //remove temp directory
+            try FileManager.default.removeItem(atPath: temporaryDirectory!) //remove temp directory
         } catch {
-            NSLog("error deleting temp directory??")
+            NSLog("error deleting temp directory?? attempting to ignore.")
         }
         
         if(unmountDriveAfter)
