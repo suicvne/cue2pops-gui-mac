@@ -37,6 +37,7 @@ class ViewController: NSViewController {
     
     let cue2popsPath = Bundle.main.resourcePath! + "/cue2pops"
     let elfPath = Bundle.main.resourcePath! + "/POPSTARTER.ELF"
+    let pfsWrap = Bundle.main.resourcePath! + "/PFS_WRAP.BIN"
     
     /**
      extra options
@@ -254,6 +255,7 @@ class ViewController: NSViewController {
                 {
                     try fileManager.createDirectory(atPath: self.externalVolumeTextField.stringValue + "/POPS", withIntermediateDirectories: false, attributes: nil)
                     try fileManager.copyItem(atPath: popsPak, toPath: self.externalVolumeTextField.stringValue + "/POPS/POPS.PAK")
+                    try fileManager.copyItem(atPath: self.pfsWrap, toPath: self.externalVolumeTextField.stringValue + "/POPS/PFS_WRAP.BIN")
                 }
                 catch
                 {
