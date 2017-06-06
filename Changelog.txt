@@ -1,0 +1,12 @@
+Version 1.1
+-Add back edit menu for copy and paste of anything in the log.
+-Log automatically scrolls to the bottom when being populated
+-Added basic touchbar support for the 2016 MacBook Pro
+-Bundle AND copy PFS_WRAP.BIN with POPS.PAK just in case
+
+Version 1.0
+
+-Initial release
+-Bundles cue2pops and POPSTARTER.ELF
+-Automatically copies to external drive.
+-Supports cue2pops extra options such as gap, trainer, and vmode.

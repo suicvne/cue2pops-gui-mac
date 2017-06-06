@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2700FBFE1EE730A400BFCAC0 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2700FBFD1EE730A400BFCAC0 /* Changelog.txt */; };
 		278E1FC81EE08B21008A86E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FC71EE08B21008A86E0 /* AppDelegate.swift */; };
 		278E1FCA1EE08B21008A86E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E1FC91EE08B21008A86E0 /* ViewController.swift */; };
 		278E1FCC1EE08B21008A86E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278E1FCB1EE08B21008A86E0 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2700FBFD1EE730A400BFCAC0 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
 		278E1FC41EE08B21008A86E0 /* cue2pops Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cue2pops Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		278E1FC71EE08B21008A86E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278E1FC91EE08B21008A86E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		278E1FBB1EE08B21008A86E0 = {
 			isa = PBXGroup;
 			children = (
+				2700FBFD1EE730A400BFCAC0 /* Changelog.txt */,
 				278E1FC61EE08B21008A86E0 /* POPS */,
 				278E1FD81EE08B21008A86E0 /* POPSTests */,
 				278E1FE31EE08B21008A86E0 /* POPSUITests */,
@@ -247,6 +250,7 @@
 				278E1FFD1EE09C3C008A86E0 /* cue2pops in Resources */,
 				279756C21EE0C02400A46EC8 /* cue2pops Help.rtfd in Resources */,
 				278E1FCF1EE08B21008A86E0 /* Main.storyboard in Resources */,
+				2700FBFE1EE730A400BFCAC0 /* Changelog.txt in Resources */,
 				278E1FF51EE094CE008A86E0 /* POPSTARTER.ELF in Resources */,
 				27BF1B2B1EE1CDA80021D888 /* PFS_WRAP.BIN in Resources */,
 			);
