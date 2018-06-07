@@ -11,8 +11,9 @@ All previous and current versions are offered at the download link above.
 
 # System Requirements
 
-Any Mac running OS X 10.9 Mavericks or higher, though this app was written and tested in macOS 10.12 Sierra.
+Any Mac running OS X 10.9 Mavericks or higher (OS X 10.10 Yosemite or higher for version 1.1.5), though this app was written and tested in macOS 10.12 Sierra.
 
 # Screenshots
 
+![](https://i.imgur.com/n69FA0s.png)
 ![](http://imgur.com/4Ro0fq4.png)
